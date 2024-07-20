@@ -1,10 +1,9 @@
-import AddPost from "@/components/AddPost"
-import Feed from "@/components/Feed"
-import LeftMenu from "@/components/LeftMenu"
-import RightMenu from "@/components/RightMenu"
-import Stories from "@/components/Stories"
+import Feed from '@/components/Feed'
+import LeftMenu from '@/components/LeftMenu'
+import RightMenu from '@/components/RightMenu'
+import React from 'react'
 
-const Homepage = () => {
+export default function ProfilePage() {
   return (
     <div className='flex items-start justify-between gap-6 py-6'>
       <div className="hidden xl:block w-[20%]">
@@ -12,16 +11,12 @@ const Homepage = () => {
       </div>
       <div className="w-full lg:w-[70%] xl:w-[50%]">
         <div className="flex flex-col gap-6">
-          <Stories />
-          <AddPost />
           <Feed />
         </div>
       </div>
       <div className="hidden lg:block w-[30%]">
-        <RightMenu />
+        <RightMenu userId='test'/>
       </div>
     </div>
   )
 }
-
-export default Homepage
